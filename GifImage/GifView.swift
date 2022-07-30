@@ -19,9 +19,7 @@ struct GifView: UIViewRepresentable {
         let webView = WKWebView()
         guard let url = Bundle.main.url(forResource: name, withExtension: "gif") else {return webView}
         let data = try! Data(contentsOf: url)
-        
         webView.load(data, mimeType: "image/gif", characterEncodingName: "UTF-8", baseURL: url.deletingLastPathComponent())
-        
         return webView
     }
     
