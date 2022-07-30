@@ -9,8 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        GifView("goose")
+            .frame(width: UIScreen.main.bounds.width/2, height: UIScreen.main.bounds.width/2)
+            .clipShape(Circle())
     }
 }
 
